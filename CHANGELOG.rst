@@ -1,6 +1,16 @@
 Changelog
 ---------
 
+(unreleased)
+************
+
+Features:
+
+- ``MarshmallowPlugin`` now sets ``additionalProperties`` to be false
+  when the default unknown fields are not explicitly set (:issue:`821`).
+  Thanks :user:`mwgamble` for the report and :user:`pieterocp` for the pr (:pr:`985`).
+
+
 6.8.2 (2025-05-12)
 ******************
 
