@@ -143,6 +143,13 @@ class TestMarshmallowSchemaToModelDefinition:
         res = openapi.schema2jsonschema(UnknownRaiseSchema)
         assert res["additionalProperties"] is False
 
+    def test_unknown_value_unset_disallow(self, openapi):
+        class UnknownRaiseSchema(Schema):
+            first = fields.Str()
+
+        res = openapi.schema2jsonschema(UnknownRaiseSchema)
+        assert res["additionalProperties"] is False
+
     def test_unknown_values_allow(self, openapi):
         class UnknownIncludeSchema(Schema):
             class Meta:
