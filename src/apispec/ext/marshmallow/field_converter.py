@@ -627,7 +627,7 @@ def make_min_max_attributes(validators, min_attr, max_attr) -> dict:
     of the validator objects that attribute will be omitted.
 
     :param validators list: A list of `Marshmallow` validator objects. Each
-        objct is inspected for a minimum and maximum values
+        object is inspected for a minimum and maximum values
     :param min_attr string: The OpenAPI attribute for the minimum value
     :param max_attr string: The OpenAPI attribute for the maximum value
     """

@@ -267,7 +267,7 @@ class SchemaResolver:
             # Input
             {
                 "type": "object",
-                "properties": {"pet": "PetSchcema", "user": "UserSchema"},
+                "properties": {"pet": "PetSchema", "user": "UserSchema"},
             }
 
             # Output
