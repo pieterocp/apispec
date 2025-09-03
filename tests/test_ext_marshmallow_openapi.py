@@ -1,3 +1,4 @@
+import importlib.metadata
 from datetime import datetime
 
 import pytest
@@ -9,6 +10,8 @@ from apispec.ext.marshmallow import MarshmallowPlugin, OpenAPIConverter
 
 from .schemas import CustomList, CustomStringField
 from .utils import build_ref, get_schemas, validate_spec
+
+MA_VERSION = Version(importlib.metadata.version("marshmallow"))
 
 
 class TestMarshmallowFieldToOpenAPI:
@@ -191,6 +194,9 @@ class TestMarshmallowSchemaToModelDefinition:
         else:
             assert res["additionalProperties"] is expected
 
+    @pytest.mark.skipif(
+        MA_VERSION.major >= 4, reason="marshmallow 4 drop inferred fields"
+    )
     def test_only_explicitly_declared_fields_are_translated(self, openapi):
         class UserSchema(Schema):
             _id = fields.Int()
