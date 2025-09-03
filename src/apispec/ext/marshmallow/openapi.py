@@ -258,7 +258,9 @@ class OpenAPIConverter(FieldConverterMixin):
             jsonschema["title"] = Meta.title
         if hasattr(Meta, "description"):
             jsonschema["description"] = Meta.description
-        if hasattr(Meta, "unknown") and Meta.unknown != marshmallow.EXCLUDE:
+        if not hasattr(Meta, "unknown"):
+            jsonschema["additionalProperties"] = False
+        elif Meta.unknown != marshmallow.EXCLUDE:
             jsonschema["additionalProperties"] = Meta.unknown == marshmallow.INCLUDE
 
         return jsonschema

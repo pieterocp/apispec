@@ -133,6 +133,13 @@ class TestMarshmallowSchemaToModelDefinition:
         res = openapi.schema2jsonschema(WhiteStripesSchema)
         assert set(res["properties"].keys()) == {"guitarist", "drummer"}
 
+    def test_unknown_values_default_disallow(self, openapi):
+        class UnknownDefaultSchema(Schema):
+            first = fields.Str()
+
+        res = openapi.schema2jsonschema(UnknownDefaultSchema)
+        assert res["additionalProperties"] is False
+
     def test_unknown_values_disallow(self, openapi):
         class UnknownRaiseSchema(Schema):
             class Meta:
