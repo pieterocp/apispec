@@ -170,6 +170,27 @@ class TestMarshmallowSchemaToModelDefinition:
         res = openapi.schema2jsonschema(UnknownExcludeSchema)
         assert "additionalProperties" not in res
 
+    @pytest.mark.parametrize("meta_unknown", (RAISE, INCLUDE, EXCLUDE, None))
+    @pytest.mark.parametrize(
+        "instance_unknown,expected", ((RAISE, False), (INCLUDE, True), (EXCLUDE, None))
+    )
+    def test_unknown_values_instance_override_meta(
+        self, openapi, instance_unknown, expected, meta_unknown
+    ):
+        class UnknownSchema(Schema):
+            if meta_unknown is not None:
+
+                class Meta:
+                    unknown = meta_unknown
+
+            first = fields.Str()
+
+        res = openapi.schema2jsonschema(UnknownSchema(unknown=instance_unknown))
+        if expected is None:
+            assert "additionalProperties" not in res
+        else:
+            assert res["additionalProperties"] is expected
+
     def test_only_explicitly_declared_fields_are_translated(self, openapi):
         class UserSchema(Schema):
             _id = fields.Int()
