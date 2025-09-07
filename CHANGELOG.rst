@@ -1,6 +1,18 @@
 Changelog
 ---------
 
+6.8.3 (2025-09-07)
+******************
+
+Bug fixes:
+
+- ``MarshmallowPlugin``: set ``additionnalProperties`` to ``False`` if
+  ``unknown`` is not set (:pr:`988`).
+  Thanks :user:`mwgamble` for reporting.
+- ``MarshmallowPlugin``: set ``additionnalProperties`` according to ``unknown``
+  value passed at schema instantiation, not only as ``Meta`` attribute
+  (:pr:`988`).
+
 6.8.2 (2025-05-12)
 ******************
 
