@@ -1,6 +1,14 @@
 Changelog
 ---------
 
+6.8.4 (2025-09-22)
+******************
+
+Bug fixes:
+
+- Set ``TimeDelta`` field type according to ``serialization_type`` (:pr:`990`).
+  Thanks :user:`LewisHaley` for the PR.
+
 6.8.3 (2025-09-07)
 ******************
 
