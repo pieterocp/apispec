@@ -1,6 +1,13 @@
 Changelog
 ---------
 
+6.9.0 (unreleased)
+******************
+
+Other changes:
+
+- Drop support for Python 3.8 (:pr:`994`).
+
 6.8.4 (2025-09-22)
 ******************
 
