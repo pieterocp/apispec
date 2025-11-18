@@ -23,10 +23,10 @@ Bug fixes:
 
 Bug fixes:
 
-- ``MarshmallowPlugin``: set ``additionnalProperties`` to ``False`` if
+- ``MarshmallowPlugin``: set ``additionalProperties`` to ``False`` if
   ``unknown`` is not set (:pr:`988`).
   Thanks :user:`mwgamble` for reporting.
-- ``MarshmallowPlugin``: set ``additionnalProperties`` according to ``unknown``
+- ``MarshmallowPlugin``: set ``additionalProperties`` according to ``unknown``
   value passed at schema instantiation, not only as ``Meta`` attribute
   (:pr:`988`).
 
