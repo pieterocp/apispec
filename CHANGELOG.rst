@@ -1,15 +1,18 @@
 Changelog
 ---------
 
-6.9.0 (unreleased)
+6.9.0 (2025-11-30)
 ******************
+
+Features:
+
+- Support ``examples`` property from field metadata (:pr:`999`).
+  Thanks :user:`Flix6x` for the PR.
 
 Other changes:
 
 - Officially support Python 3.14 (:pr:`998`).
-- Drop support for Python 3.8 (:pr:`994`).
-- Support ``examples`` property from field metadata (:pr:`999`).
-  Thanks :user:`Flix6x` for the PR.
+- Drop support for Python 3.9 (:pr:`994`).
 
 6.8.4 (2025-09-22)
 ******************
