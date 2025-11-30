@@ -88,3 +88,4 @@ Contributors (chronological)
 - Robin `@allrob23 <https://github.com/allrob23>`_
 - Xingang Zhang `@0x0400 <https://github.com/0x0400>`_
 - Lewis Haley `@LewisHaley <https://github.com/LewisHaley>`_
+- Felix Claessen `@Flix6x <https://github.com/Flix6x>`_

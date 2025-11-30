@@ -8,6 +8,8 @@ Other changes:
 
 - Officially support Python 3.14 (:pr:`998`).
 - Drop support for Python 3.8 (:pr:`994`).
+- Support ``examples`` property from field metadata (:pr:`999`).
+  Thanks :user:`Flix6x` for the PR.
 
 6.8.4 (2025-09-22)
 ******************
@@ -22,10 +24,10 @@ Bug fixes:
 
 Bug fixes:
 
-- ``MarshmallowPlugin``: set ``additionnalProperties`` to ``False`` if
+- ``MarshmallowPlugin``: set ``additionalProperties`` to ``False`` if
   ``unknown`` is not set (:pr:`988`).
   Thanks :user:`mwgamble` for reporting.
-- ``MarshmallowPlugin``: set ``additionnalProperties`` according to ``unknown``
+- ``MarshmallowPlugin``: set ``additionalProperties`` according to ``unknown``
   value passed at schema instantiation, not only as ``Meta`` attribute
   (:pr:`988`).
 
